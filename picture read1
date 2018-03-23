@@ -22,10 +22,10 @@ path = file_name2('working_space')
 #以及http://blog.csdn.net/uestc_c2_403/article/details/74435286
 
 #path2 = tf.train.match_filenames_once(path)
-file_queue = tf.train.string_input_producer(path, shuffle=True, num_epochs=None) #创建输入队列  
+file_queue = tf.train.string_input_producer(path, shuffle=True, num_epochs=None) #创建输入队列num_epochs确定输入的数量,None两倍输出 
 image_reader = tf.WholeFileReader()  
 key, image = image_reader.read(file_queue)  
-image = tf.image.decode_jpeg(image)  
+image = tf.image.decode_jpeg(image)  #image为tensor格式，image.eval()为ndarray格式，
 
 with tf.Session() as sess:  
     #coord = tf.train.Coordinator() #协同启动的线程  
