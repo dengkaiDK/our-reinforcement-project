@@ -16,7 +16,7 @@ def file_name2(file_dir):   #特定类型的文件
                 L.append(os.path.join(root, file))  
     return L 
 
-path = file_name2('working_space')
+path = file_name2('image_1')
 
 #以下参考http://blog.csdn.net/buptgshengod/article/details/72956846 (十图详解TensorFlow数据读取机制)
 #以及http://blog.csdn.net/uestc_c2_403/article/details/74435286
